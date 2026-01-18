@@ -1,0 +1,171 @@
+# Wiki Migration Progress
+# Format: STATUS|TIMESTAMP|TITLE
+# STATUS: DONE, SKIP, FAIL
+# ---
+DONE|2026-01-18 00:53:02|.profile
+DONE|2026-01-18 00:53:02|Acronis
+DONE|2026-01-18 00:53:03|Adobe Illustrator
+DONE|2026-01-18 00:53:03|Adobe LiveCycle Designer
+DONE|2026-01-18 00:53:03|Airport Config
+DONE|2026-01-18 00:53:03|Android OS
+DONE|2026-01-18 00:53:04|Apache
+DONE|2026-01-18 00:53:04|Apple TV
+DONE|2026-01-18 00:53:07|Asterisk
+SKIP|2026-01-18 00:53:07|Asterisk Dialplan|merged_into_voip--asterisk.md
+SKIP|2026-01-18 00:53:07|Asterisk Echo|merged_into_voip--asterisk.md
+SKIP|2026-01-18 00:53:07|Asterisk Firewall|merged_into_voip--asterisk.md
+SKIP|2026-01-18 00:53:07|Asterisk Front End|merged_into_voip--asterisk.md
+SKIP|2026-01-18 00:53:07|Asterisk Install|merged_into_voip--asterisk.md
+SKIP|2026-01-18 00:53:07|Asterisk Logs|merged_into_voip--asterisk.md
+SKIP|2026-01-18 00:53:07|Asterisk Queue|merged_into_voip--asterisk.md
+SKIP|2026-01-18 00:53:07|Asterisk Sipgate|merged_into_voip--asterisk.md
+SKIP|2026-01-18 00:53:07|Asterisk Tutorial|merged_into_voip--asterisk.md
+SKIP|2026-01-18 00:53:07|Asterisk Voice Changer|merged_into_voip--asterisk.md
+DONE|2026-01-18 00:53:09|Awk Command
+DONE|2026-01-18 00:53:09|Azureus
+DONE|2026-01-18 00:53:11|Bash
+SKIP|2026-01-18 00:53:11|Bash Scripts|merged_into_shell--bash.md
+SKIP|2026-01-18 00:53:11|Bash Random Word|merged_into_shell--bash.md
+SKIP|2026-01-18 00:53:11|Bash Rename File Extensions|merged_into_shell--bash.md
+SKIP|2026-01-18 00:53:11|Bash Sort IP Addresses|merged_into_shell--bash.md
+DONE|2026-01-18 00:53:11|Bluetooth
+DONE|2026-01-18 00:53:12|CD Burning Windows Domain
+DONE|2026-01-18 00:53:12|CMsort
+DONE|2026-01-18 00:53:12|Change MTU Size
+DONE|2026-01-18 00:53:13|Chmod
+DONE|2026-01-18 00:53:13|Cisco
+DONE|2026-01-18 00:53:13|Command Prompt
+DONE|2026-01-18 00:53:14|Control Userpasswords2
+DONE|2026-01-18 00:53:16|CorelDraw
+DONE|2026-01-18 00:53:16|Crontab
+DONE|2026-01-18 00:53:16|Curl
+DONE|2026-01-18 00:53:17|DHCPd
+DONE|2026-01-18 00:53:17|DTG Graphic Process
+DONE|2026-01-18 00:53:17|DVD Region Codes
+DONE|2026-01-18 00:53:18|Date
+DONE|2026-01-18 00:53:18|Daylight Savings Time
+DONE|2026-01-18 00:53:18|Dee Jay Instructions
+DONE|2026-01-18 00:53:19|Defrag Tool Windows XP
+DONE|2026-01-18 00:53:19|Del Command
+DONE|2026-01-18 00:53:19|Disk Clean Up Tool Windows XP
+DONE|2026-01-18 00:53:20|DiskPart
+DONE|2026-01-18 00:53:20|DivX Codecs
+DONE|2026-01-18 00:53:21|Du Command
+DONE|2026-01-18 00:53:22|E61i
+DONE|2026-01-18 00:53:23|EPS Optimization
+DONE|2026-01-18 00:53:23|Emcast
+DONE|2026-01-18 00:53:24|Excel
+SKIP|2026-01-18 00:53:24|Excel Mulit File Query|merged_into_misc--excel.md
+DONE|2026-01-18 00:53:24|Eyebeam
+DONE|2026-01-18 00:53:24|Facebook
+DONE|2026-01-18 00:53:24|Fail2ban
+DONE|2026-01-18 00:53:25|Ffmpeg
+DONE|2026-01-18 00:53:25|Find Command
+DONE|2026-01-18 00:53:25|Finder
+DONE|2026-01-18 00:53:26|Firefox
+SKIP|2026-01-18 00:53:26|Firefox Printing|merged_into_misc--firefox.md
+SKIP|2026-01-18 00:53:26|Firefox Profiles|merged_into_misc--firefox.md
+SKIP|2026-01-18 00:53:26|Firefox SVG|merged_into_misc--firefox.md
+DONE|2026-01-18 00:53:28|Firewall ipfw
+DONE|2026-01-18 00:53:29|Flash
+DONE|2026-01-18 00:53:29|For Command
+DONE|2026-01-18 00:53:29|FreeBPX
+DONE|2026-01-18 00:53:30|Ftxdumperfuser
+DONE|2026-01-18 00:53:30|GPO Error 1085
+SKIP|2026-01-18 00:53:30|Group Policy 1085|merged_into_windows--gpo-error-1085.md
+DONE|2026-01-18 00:53:31|Git
+DONE|2026-01-18 00:53:31|Goverts GoBatchGS
+DONE|2026-01-18 00:53:31|Greasemonkey
+DONE|2026-01-18 00:53:32|Grep Command
+DONE|2026-01-18 00:53:32|Group Policy
+DONE|2026-01-18 00:53:32|History Command
+DONE|2026-01-18 00:53:32|ImageMagick
+DONE|2026-01-18 00:53:33|Internet Slang
+DONE|2026-01-18 00:53:35|Ivtv
+SKIP|2026-01-18 00:53:35|Ivtv-channel|merged_into_media--ivtv.md
+DONE|2026-01-18 00:53:35|Java
+DONE|2026-01-18 00:53:36|JavaScript
+DONE|2026-01-18 00:53:36|Linux DNS
+DONE|2026-01-18 00:53:36|Linux Hostname
+DONE|2026-01-18 00:53:37|Linux Modules
+DONE|2026-01-18 00:53:37|Linux Network Config
+DONE|2026-01-18 00:53:37|Linux Time
+DONE|2026-01-18 00:53:38|Linux userdel
+DONE|2026-01-18 00:53:38|Lirc
+DONE|2026-01-18 00:53:39|Logonscript.vbs
+DONE|2026-01-18 00:53:39|Lookupd Mac OS X
+DONE|2026-01-18 00:53:40|Ls Command
+DONE|2026-01-18 00:53:40|MEncoder
+DONE|2026-01-18 00:53:42|MPlayer
+DONE|2026-01-18 00:53:42|Mac OS X Preview
+SKIP|2026-01-18 00:53:42|Mac OS X SCP (GUI)|merge_target
+DONE|2026-01-18 00:53:42|MediaWiki BreadCrumbs
+DONE|2026-01-18 00:53:43|Microsoft Outlook
+DONE|2026-01-18 00:53:43|Mount Command
+DONE|2026-01-18 00:53:43|Mysql
+DONE|2026-01-18 00:53:44|NTFS
+DONE|2026-01-18 00:53:44|Negative Ping Time
+DONE|2026-01-18 00:53:44|Net Use Command
+DONE|2026-01-18 00:53:45|Network Time Protocol
+DONE|2026-01-18 00:53:45|OpenSSL
+DONE|2026-01-18 00:53:45|PHP
+SKIP|2026-01-18 00:53:45|PHP Install|merged_into_web--php.md
+DONE|2026-01-18 00:53:46|Photoshop
+DONE|2026-01-18 00:53:48|Postfix
+DONE|2026-01-18 00:53:48|PostgreSQL
+DONE|2026-01-18 00:53:49|Printers
+DONE|2026-01-18 00:53:49|Printful
+DONE|2026-01-18 00:53:49|Proc
+DONE|2026-01-18 00:53:50|Ps2svg
+DONE|2026-01-18 00:53:50|Public Key Authentication
+DONE|2026-01-18 00:53:50|QueueMetrics
+DONE|2026-01-18 00:53:50|Quotes
+DONE|2026-01-18 00:53:51|Regular Expressions
+DONE|2026-01-18 00:53:51|Remote Desktop
+DONE|2026-01-18 00:53:51|Remote Shutdown
+DONE|2026-01-18 00:53:52|Remote User Discovery
+DONE|2026-01-18 00:53:52|RoboCopy
+DONE|2026-01-18 00:53:52|Rsync
+DONE|2026-01-18 00:53:55|SELinux
+DONE|2026-01-18 00:53:55|SSH
+DONE|2026-01-18 00:53:55|Samba
+DONE|2026-01-18 00:53:55|Screen
+DONE|2026-01-18 00:53:56|Screen Capture
+DONE|2026-01-18 00:53:57|Secure Copy (SCP)
+SKIP|2026-01-18 00:53:57|Secure Copy SCP|merged_into_security--scp.md
+SKIP|2026-01-18 00:53:57|Mac OS X SCP (GUI)|merged_into_security--scp.md
+DONE|2026-01-18 00:53:57|Sed Command
+DONE|2026-01-18 00:53:57|Send Attachments From Terminal
+DONE|2026-01-18 00:53:58|Server Backup
+DONE|2026-01-18 00:53:58|Sips Command
+DONE|2026-01-18 00:53:58|Special Characters
+DONE|2026-01-18 00:53:59|Strototime
+DONE|2026-01-18 00:53:59|Subversion
+DONE|2026-01-18 00:54:00|Temperature Conversion
+DONE|2026-01-18 00:54:02|Terminal Linux
+DONE|2026-01-18 00:54:02|Terminal Mac OS X
+DONE|2026-01-18 00:54:02|Terminal Windows XP
+DONE|2026-01-18 00:54:02|Time Zone
+DONE|2026-01-18 00:54:03|Tr Command
+DONE|2026-01-18 00:54:03|True Type Fonts
+DONE|2026-01-18 00:54:03|Tune2fs
+DONE|2026-01-18 00:54:04|Using Shared Drives
+DONE|2026-01-18 00:54:04|Vi Command
+DONE|2026-01-18 00:54:04|Visio
+DONE|2026-01-18 00:54:05|Visual Basic Script
+DONE|2026-01-18 00:54:05|Vlc
+DONE|2026-01-18 00:54:05|Vsftpd
+DONE|2026-01-18 00:54:06|Webmin
+DONE|2026-01-18 00:54:06|Wget Command
+DONE|2026-01-18 00:54:08|What is this program
+DONE|2026-01-18 00:54:08|Widgets
+DONE|2026-01-18 00:54:08|WikiMarkUp
+DONE|2026-01-18 00:54:09|WinTV
+DONE|2026-01-18 00:54:09|Windows 2003 Shares
+DONE|2026-01-18 00:54:09|Windows 7
+DONE|2026-01-18 00:54:10|Windows Vista
+DONE|2026-01-18 00:54:10|Windows XP Firewall
+DONE|2026-01-18 00:54:10|Wireless Configuration
+DONE|2026-01-18 00:54:11|XP Registy Shortcuts
+DONE|2026-01-18 00:54:11|Xargs Command
+DONE|2026-01-18 00:54:11|Xmlstarlet

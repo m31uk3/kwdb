@@ -1,0 +1,210 @@
+#!/bin/bash
+# Validation for migrated wiki content
+# Bash 3.2 compatible
+
+# Validate a single markdown file
+# Returns: 0 if valid, 1 if issues found
+validate_file() {
+    local file="$1"
+    local issues=0
+    local filename
+    filename=$(basename "$file")
+
+    # Check file exists and is not empty
+    if [ ! -f "$file" ]; then
+        echo "ERROR: File not found: $file"
+        return 1
+    fi
+
+    local size
+    size=$(wc -c < "$file" | tr -d ' ')
+    if [ "$size" -lt 10 ]; then
+        echo "WARNING: $filename - File is nearly empty ($size bytes)"
+        issues=$((issues + 1))
+    fi
+
+    # Check for H1 title
+    if ! head -1 "$file" | grep -q '^# '; then
+        echo "WARNING: $filename - Missing H1 title"
+        issues=$((issues + 1))
+    fi
+
+    # Check for unconverted wiki markup
+    local wiki_artifacts
+    wiki_artifacts=$(grep -c '\[\[' "$file" 2>/dev/null || echo 0)
+    if [ "$wiki_artifacts" -gt 0 ]; then
+        echo "WARNING: $filename - Found $wiki_artifacts unconverted wiki links"
+        issues=$((issues + 1))
+    fi
+
+    # Check for unclosed code blocks
+    local code_opens code_closes
+    code_opens=$(grep -c '^```' "$file" 2>/dev/null || echo 0)
+    if [ $((code_opens % 2)) -ne 0 ]; then
+        echo "WARNING: $filename - Unbalanced code blocks"
+        issues=$((issues + 1))
+    fi
+
+    # Check for broken internal links
+    local broken_links
+    broken_links=$(grep -oE '\]\([^)]+\.md\)' "$file" 2>/dev/null | sed 's/\](//; s/)$//' | while read -r link; do
+        # Extract just the filename (remove anchors)
+        local target
+        target=$(echo "$link" | cut -d'#' -f1)
+        local target_path
+        target_path="$(dirname "$file")/$target"
+        if [ ! -f "$target_path" ]; then
+            echo "$target"
+        fi
+    done)
+
+    if [ -n "$broken_links" ]; then
+        local broken_count
+        broken_count=$(echo "$broken_links" | wc -l | tr -d ' ')
+        echo "WARNING: $filename - Found $broken_count broken internal links"
+        issues=$((issues + 1))
+    fi
+
+    return $issues
+}
+
+# Validate all files in output directory
+validate_all() {
+    local output_dir="$1"
+    local total=0 valid=0 warnings=0
+
+    echo "Validating migrated files in: $output_dir"
+    echo ""
+
+    if [ ! -d "$output_dir" ]; then
+        echo "ERROR: Output directory not found"
+        return 1
+    fi
+
+    local file
+    for file in "$output_dir"/*.md; do
+        [ -f "$file" ] || continue
+        total=$((total + 1))
+
+        if validate_file "$file"; then
+            valid=$((valid + 1))
+        else
+            warnings=$((warnings + 1))
+        fi
+    done
+
+    echo ""
+    echo "Validation Summary:"
+    echo "  Total files: $total"
+    echo "  Valid: $valid"
+    echo "  With warnings: $warnings"
+
+    if [ "$warnings" -eq 0 ]; then
+        echo ""
+        echo "All files passed validation!"
+        return 0
+    else
+        return 1
+    fi
+}
+
+# Generate validation report
+generate_report() {
+    local output_dir="$1"
+    local report_file="${output_dir}/VALIDATION_REPORT.md"
+
+    echo "# Wiki Migration Validation Report" > "$report_file"
+    echo "" >> "$report_file"
+    echo "Generated: $(date)" >> "$report_file"
+    echo "" >> "$report_file"
+
+    # File stats
+    local total_files total_lines total_words
+    total_files=$(ls -1 "$output_dir"/*.md 2>/dev/null | wc -l | tr -d ' ')
+    total_lines=$(cat "$output_dir"/*.md 2>/dev/null | wc -l | tr -d ' ')
+    total_words=$(cat "$output_dir"/*.md 2>/dev/null | wc -w | tr -d ' ')
+
+    echo "## Statistics" >> "$report_file"
+    echo "" >> "$report_file"
+    echo "- Total files: $total_files" >> "$report_file"
+    echo "- Total lines: $total_lines" >> "$report_file"
+    echo "- Total words: $total_words" >> "$report_file"
+    echo "" >> "$report_file"
+
+    # Category breakdown
+    echo "## Files by Category" >> "$report_file"
+    echo "" >> "$report_file"
+
+    local categories
+    categories="shell filesystem networking security voip windows web database media graphics config misc"
+    for cat in $categories; do
+        local count
+        count=$(ls -1 "$output_dir"/${cat}--*.md 2>/dev/null | wc -l | tr -d ' ')
+        if [ "$count" -gt 0 ]; then
+            echo "- $cat: $count files" >> "$report_file"
+        fi
+    done
+    echo "" >> "$report_file"
+
+    # Issues section
+    echo "## Validation Issues" >> "$report_file"
+    echo "" >> "$report_file"
+
+    local has_issues=0
+    for file in "$output_dir"/*.md; do
+        [ -f "$file" ] || continue
+        local output
+        output=$(validate_file "$file" 2>&1)
+        if [ -n "$output" ]; then
+            has_issues=1
+            echo "$output" >> "$report_file"
+        fi
+    done
+
+    if [ "$has_issues" -eq 0 ]; then
+        echo "No issues found." >> "$report_file"
+    fi
+
+    echo "" >> "$report_file"
+    echo "---" >> "$report_file"
+    echo "*Report generated by wiki migration validation system*" >> "$report_file"
+
+    echo "Report saved to: $report_file"
+}
+
+# Quick check - just count files and categories
+quick_check() {
+    local output_dir="$1"
+
+    echo "Quick validation check:"
+    echo ""
+
+    if [ ! -d "$output_dir" ]; then
+        echo "No output directory found. Run migration first."
+        return 1
+    fi
+
+    local total_files
+    total_files=$(ls -1 "$output_dir"/*.md 2>/dev/null | wc -l | tr -d ' ')
+    echo "Total markdown files: $total_files"
+
+    # Check for empty files
+    local empty_files
+    empty_files=$(find "$output_dir" -name "*.md" -size 0 | wc -l | tr -d ' ')
+    echo "Empty files: $empty_files"
+
+    # Check for wiki artifacts
+    local files_with_artifacts
+    files_with_artifacts=$(grep -l '\[\[' "$output_dir"/*.md 2>/dev/null | wc -l | tr -d ' ')
+    echo "Files with unconverted wiki links: $files_with_artifacts"
+
+    echo ""
+
+    if [ "$empty_files" -gt 0 ] || [ "$files_with_artifacts" -gt 0 ]; then
+        echo "Issues detected. Run 'validate' for full report."
+        return 1
+    else
+        echo "Quick check passed!"
+        return 0
+    fi
+}
