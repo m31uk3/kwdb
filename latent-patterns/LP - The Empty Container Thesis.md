@@ -259,6 +259,74 @@ The teams that figure this out first will own agentic commerce. The ones still t
 | Tobi Lutke (Founders Podcast / David Senra) | Very High | January 2026 | Direct | Strong |
 | Amazon Strands Agent SOPs (github.com/strands-agents/agent-sop) | High. Amazon's agent workflow framework. 5 production SOPs, RFC 2119 constraint system, active development (56+ PRs). Integrated with Kiro IDE. | March 2026 (latest commits) | Direct. Represents the industry's strongest counter-thesis to emergence-over-specification. | Very Strong. Internally coherent system where each SOP feeds into the next. Constraints are empirically derived from agent failure patterns. |
 | Kiro IDE (kiro.dev, AWS) | High. AWS-backed IDE with spec-driven development as core philosophy. Three-stage spec process (Requirements, Architecture, Tasks). EARS notation for formal requirements. | March 2026 | Direct. The commercial implementation of spec-driven agent development. | Strong. Philosophy is consistent with Strands SOPs and extends them with IDE-level integration. |
+| Math Knowledge Graph (Alex Smith, @ninja_maths) | Medium-High. Practitioner evidence from education. 3,000-node dependency graph spanning 4th grade to university ML. Demonstrated result: third-grader completing 6 years in 1 year. | March 2026 | Indirect but structurally isomorphic. Demonstrates the architecture that sits between empty containers and rigid specification. | Strong. The mastery-gated, dependency-structured, self-navigated system is internally coherent and empirically validated by student outcomes. |
+
+---
+
+## Extension: The Knowledge Graph as Missing Architecture
+
+The thesis as written proposes two poles: empty containers (primitives + permission, no structure) and Strands SOPs (full specification, rigid structure). A third architecture resolves the tension between them.
+
+### The Evidence
+
+A mathematics knowledge graph spanning 3,000 topics from 4th grade through university-level machine learning (source: Alex Smith, @ninja_maths). Each node is a self-contained math concept. Edges represent prerequisite dependencies. No prescribed path through the graph. One constraint: demonstrate mastery of a topic before accessing topics that depend on it.
+
+A third-grader traversed six years of material in one year.
+
+### Why This Happened
+
+The traditional math classroom is the Strands SOP applied to education. Linear curriculum. Age-gated progression. "Complete Chapter 3 before Chapter 4" regardless of whether you already know it. Pace set by the slowest common denominator. Every student follows the same specification.
+
+The knowledge graph strips all of that. It preserves only:
+
+- **Primitives**: 3,000 topics, each a self-contained concept
+- **Dependency relationships**: which topics require which other topics
+- **A single gate**: demonstrate mastery before progressing
+
+Everything else -- pace, sequence, method, order of exploration -- is emergent. The student navigates the graph freely. Their path is their own.
+
+The third-grader doing six years in one year is Peter's agent building cURL. Nobody specified that path. The system provided primitives, structural relationships between them, and permission. The emergent behavior -- racing through material at 6x the "specified" rate -- was the discovery. No curriculum designer would have written "third-grader completes Algebra 2" as a requirement.
+
+### The Third Architecture: Structured Primitives with Emergent Navigation
+
+This graph is neither an empty container nor a Strands SOP. It is a fundamentally different structure.
+
+An empty Docker container has no structure. The agent had to discover that TCP sockets could become an HTTP client. Pure emergence. Maximum creativity. No guidance.
+
+A Strands SOP has complete structure. Step 1 MUST precede Step 2 MUST precede Step 3. Explicit user confirmation gates. 78 MUST constraints per workflow. The path is predetermined.
+
+The knowledge graph has structure -- but the structure is in the **relationships between primitives**, not in a **sequence of actions**. The dependency edges tell you what connects to what. They do not tell you which path to take. That decision belongs to the navigator, gated only by demonstrated capability.
+
+This is the architecture the Empty Container Thesis has been missing.
+
+### Translation to Agentic Commerce
+
+Apply the knowledge graph architecture to Tobi's dark room:
+
+**Nodes** = commercial primitives. Product search. Price comparison. Size/fit verification. Trust assessment. Payment initiation. Delivery tracking. Dispute resolution. Return processing.
+
+**Edges** = dependency relationships between those primitives. Trust assessment must precede payment initiation. Size verification must precede commitment. Product search must precede comparison. Payment must precede delivery tracking. These relationships are structural, not sequential -- multiple valid orderings exist.
+
+**Gate** = demonstrated capability. The agent must prove it can correctly execute a primitive before accessing dependents. Not a human approval gate (Strands' "MUST wait for explicit user confirmation"). A functional verification: did the agent correctly assess trust? Did the payment succeed? This is the mastery requirement, applied to agents instead of students.
+
+**No prescribed workflow.** An agent buying running shoes navigates the graph differently from an agent buying groceries. An agent shopping for a gift navigates differently from one restocking household supplies. The graph does not specify the workflow. It specifies which capabilities depend on which other capabilities. The agent discovers its own path through the commercial primitive graph -- exactly as the third-grader discovered their own path through mathematics.
+
+This is what Shopify should build. Not an agentic commerce API (Strands-style specification of how agents shop). Not raw product data in an empty sandbox (pure empty container). A **dependency graph of commercial primitives** where structure lives in the relationships and navigation is emergent.
+
+### The Revised Phase Model
+
+The original thesis proposed three phases. The knowledge graph evidence demands four:
+
+| Phase | Architecture | Method | Math Analogy |
+|-------|-------------|--------|-------------|
+| **1. Discovery** | Empty container | Observe what agents do with raw primitives. What tools do they build? What dependencies do they reveal? | Watch kids interact with math concepts freely. Learn which topics depend on which. |
+| **2. Graph Construction** | Dependency graph | Build the primitive-relationship graph from discovery data. Structure is in relationships, not sequences. | The 3,000-node knowledge graph itself. Decades of teaching observation encoded as topology. |
+| **3. Emergent Execution** | Graph navigation | Agents navigate the graph, gated by capability. Paths are self-directed. Each agent's route is shaped by its user's needs. | The third-grader doing six years in one. |
+| **4. Specification** | Strands SOPs | Apply rigid specification only to high-stakes nodes where failure is costly: payment processing, dispute resolution, regulatory compliance. | Proctored exams for critical transitions. Standardized testing for university admission. |
+
+Phase 2 is the new contribution. It is the output of Phase 1 and the input to Phase 3. It is what nobody has built yet for agentic commerce. Amazon built Phase 4 tools (Strands SOPs). Peter demonstrated Phase 1 (empty containers). The knowledge graph demonstrates that Phase 2 -- encoding discovery into a navigable dependency structure -- is what converts raw emergence into scalable, self-directed execution.
+
+The teams wandering in Tobi's dark room are stuck because they are trying to jump from Phase 1 directly to Phase 4: observe the problem, then write a spec. The knowledge graph shows what goes in between. You observe, then you build the graph, then agents navigate the graph, then you specify only the critical nodes. The graph is the product. The spec is the safety net.
 
 ---
 
@@ -290,4 +358,4 @@ The connection is monumental in two senses. First, it suggests Shopify's teams a
 ---
 
 *Synthesized: 2026-03-06*
-*Sources: Peter Steinberger -- Builders Unscripted (OpenAI, 2026); Tobi Lutke -- Founders Podcast / David Senra (2026); Amazon Strands Agent SOPs (github.com/strands-agents/agent-sop, 2026); Kiro IDE (kiro.dev, AWS, 2026)*
+*Sources: Peter Steinberger -- Builders Unscripted (OpenAI, 2026); Tobi Lutke -- Founders Podcast / David Senra (2026); Amazon Strands Agent SOPs (github.com/strands-agents/agent-sop, 2026); Kiro IDE (kiro.dev, AWS, 2026); Alex Smith (@ninja_maths) -- Math Knowledge Graph (2026)*
