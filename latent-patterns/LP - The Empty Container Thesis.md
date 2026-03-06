@@ -343,6 +343,65 @@ The teams wandering in Tobi's dark room are stuck because they are trying to jum
 
 ---
 
+## Extension: Crystallized vs. Fluid Intelligence as Cognitive Foundation
+
+Tobi names the underlying mechanism explicitly, in his discussion of StarCraft:
+
+> "Their ability to play chess is the crystallized intelligence, not the fluid intelligence, to roll with the punches."
+
+He beat players who had memorized optimal builds by making moves "that aren't in books. They're not in books because they're not good. But other people can't deal with it because they need their preparation."
+
+This is not a metaphor. It is the cognitive science that explains why spec-driven development fails for novel problems and why empty containers succeed.
+
+### The Two Intelligences
+
+**Crystallized intelligence** is accumulated knowledge. Stored procedures. Learned patterns that can be recalled and applied. It increases with experience. It is powerful when the problem matches the pattern.
+
+**Fluid intelligence** is reasoning in novel situations. Adapting without prior knowledge. Solving problems you have never encountered by working from primitives. It is powerful when the problem has no pattern yet.
+
+### The Mapping Across All Sources
+
+**Strands SOPs are crystallized intelligence for agents.** The 78 MUST constraints in PDD are stored procedures. The TDD cycle in Code Assist is a learned pattern. The Given-When-Then acceptance criteria in Code Task Generator are memorized build orders. Every SOP encodes what has worked before and enforces it going forward. This is dominant when the engineering problem matches the pattern.
+
+**Peter's empty container is fluid intelligence for agents.** No stored procedure said "build cURL from TCP sockets." The agent reasoned from primitives in a novel situation. When the voice message arrived as an untyped binary file, no memorized build told it to inspect the file header, identify Opus codec, find FFmpeg, discover an API key, and call Whisper. That was fluid reasoning. Adaptation without preparation.
+
+**Tobi's StarCraft opponents had crystallized intelligence.** They perfected single build orders. They practiced sequences until execution was flawless. They were dominant when the game went as expected. Tobi disrupted their preparation by playing unconventionally -- moves that were suboptimal in isolation but forced opponents into novel situations their crystallized patterns could not handle.
+
+**The traditional math classroom crystallizes learning.** Linear curriculum. Chapter 3 before Chapter 4. Same pace for every student. The curriculum is a stored procedure. The third-grader who did six years in one year used fluid intelligence -- navigating the knowledge graph by reasoning about what they could learn next, not by following a predetermined sequence.
+
+**Pre-COVID Shopify ran on crystallized intelligence.** Tobi was cosplaying as a public company CEO. The executives had learned patterns for how companies operate. Projects accumulated because they followed locally rational stored procedures. When COVID invalidated the core assumptions, the crystallized patterns broke. Tobi canceled 60% of projects and turned over every executive. The people who thrived were founders from the Slack channel -- people whose primary skill was fluid intelligence. They had "been responsible for people's livelihoods," which meant they had been forced to reason in novel situations repeatedly. Tobi could not have predicted who would perform. "I would have been wrong, I think, entirely."
+
+### Career Arcs as Intelligence Migration
+
+Both Tobi and Peter trace the same trajectory: crystallized expertise, burnout or stagnation, rediscovery through fluid intelligence.
+
+Tobi started as an engineer -- crystallized skill in code. He cosplayed as a CEO -- crystallized patterns for how public companies behave. The cosplay period "almost killed the company" because crystallized intelligence applied to a situation requiring fluid adaptation produces rigidity, not excellence. COVID forced a reset. He rebuilt with founders and engineered a company from first principles -- fluid intelligence applied to organizational design. His Shopify OS desired-state system crystallizes organizational structure while preserving fluid decision-making within it. The system computes what should be. People decide how to get there.
+
+Peter spent 13 years building crystallized expertise in Apple tech through PSPDFKit. He burned out. "I was just burning a bit too bright." The crystallized skill stopped producing new insight. When he discovered AI agents, the experience was pure fluid intelligence: "I got a dopamine hit every time. Maybe 30% or 40% chance it works." He built 40+ projects in a year, each one a novel situation. The empty Docker container was the purest test of fluid intelligence: can the agent reason from nothing?
+
+### The Cognitive Foundation of the Phase Model
+
+Each phase of the revised model corresponds to a specific intelligence type and transition:
+
+| Phase | Intelligence Type | Cognitive Operation |
+|-------|------------------|-------------------|
+| **1. Discovery** | Pure fluid | Agent in empty container. No prior knowledge applies. Reason from primitives. The agent building cURL from TCP sockets is fluid intelligence in action. |
+| **2. Graph Construction** | Fluid crystallizing | Observe emergent behavior. Encode the dependency relationships that agents reveal through their fluid reasoning. The graph is fluid intelligence being crystallized into reusable structure -- without losing the navigational freedom. |
+| **3. Emergent Execution** | Fluid within crystallized structure | Agent navigates the dependency graph. The graph is crystallized (fixed relationships). Navigation is fluid (self-directed path). The third-grader uses fluid intelligence to choose their route through crystallized mathematical relationships. |
+| **4. Specification** | Pure crystallized | Strands SOPs for critical nodes. Payment processing. Dispute resolution. Regulatory compliance. Memorized procedures. Repeatable. Auditable. No improvisation needed or wanted. |
+
+### The Industry Error
+
+The industry is building Phase 4 first. Crystallizing before discovering. Memorizing the build order before playing the game.
+
+Tobi's StarCraft opponents did exactly this. They were dominant until disrupted. The teams writing Strands SOPs for agentic commerce are memorizing builds for a game that has not been played yet. They are applying crystallized intelligence -- accumulated knowledge about how APIs work, how transaction protocols are designed, how product feeds are structured -- to a problem that requires fluid intelligence: what do agents actually do when given commercial primitives and a purchasing goal?
+
+The correct order: develop fluid intelligence first (empty containers), crystallize it into structure (knowledge graph), let fluid navigation operate within that structure (emergent execution), then crystallize only the high-stakes nodes (Strands SOPs for payment and compliance).
+
+Tobi states the operating principle directly: "The cheat code to always being right is just change your opinion every time you get better information." Crystallized intelligence says "we decided this." Fluid intelligence says "when did we decide this, and has the world changed since?" For a landscape that "changes every three weeks right now," fluid intelligence is not optional. It is the primary skill. Crystallization is what you do after the landscape stabilizes -- and only at the nodes where stability matters.
+
+---
+
 ## Objective Assessment: Strength of the Connection
 
 **Strong. Strengthened by the counter-thesis.**
